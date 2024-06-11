@@ -1,5 +1,5 @@
 html {
-  background-color: #4f5e72;
+  background-color: #1b1b1f;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color: #ffa6a5;
+  background-color: #242d3c;
   padding: 1px;
   text-align: center;
   box-shadow: 0px 0px 10px #000000;
@@ -19,55 +19,73 @@ header {
 
 header h1 {
   font-size: 30px;
-  color: black;
+  color: #eaf7f5;
 }
 
 footer {
-  background-color: white;
+  background-color: #242d3c;
   padding: 1px 10px;
   text-align: center;
-  color: black;
+  color: white;
 }
 
 .box {
   width: 100%;
-  background-color: #a4c0ca;
-  border: 1px solid #8e8e8e;
+  background-color: #242d3c;
+  border: 1px solid #424242;
   margin: 20px 0;
   padding: 10px 0;
   box-sizing: border-box;
-  border-right: 10px #ffa6a5 solid;
+  border-right: 10px #f12432 solid;
   box-shadow: 0px 0px 10px #000000;
+  font-variant-caps: petite-caps;
+}
+
+.box h2 {
+  background-color: #f12432;
 }
 
 .box p {
   padding: 10px 10px;
+  color: #eaf7f5;
 }
 
 .box2 {
-  border-right: 10px #ffa6a5 solid;
+  border-right: 10px #9293a0 solid;
+}
+
+.box2 h2 {
+  background-color: #9293a0;
 }
 
 .box3 {
-  border-right: 10px #ffa6a5 solid;
+  border-right: 10px #903c6a solid;
+}
+
+.box3 h2 {
+  background-color: #903c6a;
 }
 
 .box4 {
-  border-right: 10px #ffa6a5 solid;
+  border-right: 10px #4a903c solid;
+}
+
+.box4 h2 {
+  background-color: #4a903c;
 }
 
 .projectbox {
   width: 350px;
-  border: 2px dashed #a0aeaf;
+  border: 5px dashed #242d3c;
   margin: 10px;
-  background-color: #b9d6e0;
+  background-color: #819490;
   padding: 5px;
 }
 
 h2 {
   font-size: 30px;
   display: inline-block;
-  background-color: #edf7b7;
-  color: #ffa6a5;
+  background-color: #3d6290;
+  color: #eaf7f5;
   padding: 10px;
 }
