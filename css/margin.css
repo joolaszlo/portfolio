@@ -1,5 +1,6 @@
 html {
   background-color: #1b1b1f;
+  color: #eaf7f5;
 }
 
 body {
@@ -47,7 +48,6 @@ footer {
 
 .box p {
   padding: 10px 10px;
-  color: #eaf7f5;
 }
 
 .box2 {
@@ -75,12 +75,23 @@ footer {
 }
 
 .projectbox {
-  width: 350px;
+  align-self: center;
+  width: 950px;
   border: 5px dashed #242d3c;
   margin: 10px;
   background-color: #819490;
   padding: 5px;
-
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenttext {
+  width: 410px;
+  margin: 10px;
+}
+.contentimg {
+  width: 410px;
+  margin: 10px;
+  border: 1px solid #eaf7f5;
 }
 
 h2 {
