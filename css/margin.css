@@ -40,6 +40,7 @@ footer {
   border-right: 10px #f12432 solid;
   box-shadow: 0px 0px 10px #000000;
   font-variant-caps: petite-caps;
+
 }
 
 .box h2 {
@@ -76,22 +77,20 @@ footer {
 
 .projectbox {
   align-self: center;
-  width: 950px;
   border: 5px dashed #242d3c;
   margin: 10px;
   background-color: #819490;
   padding: 5px;
+  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.contenttext {
+.content {
   width: 410px;
-  margin: 10px;
-}
-.contentimg {
-  width: 410px;
-  margin: 10px;
-  border: 1px solid #eaf7f5;
+  margin: 30px;
+  box-sizing: border-box;
+  float: right;
 }
 
 h2 {

@@ -1,0 +1,42 @@
+body {
+  background-color: #35d146;
+  width: 1000px;
+  margin: 0 auto;
+  font-family: Helvetica, sans-serif;
+
+}
+
+em{
+  background-color: #d14635;
+}
+
+span{
+  background-color: #d14635;
+  margin: 30px;
+  padding: 40px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+b{
+  background-color: #35c4d1;
+  border: #d14635 1px solid;
+  padding: 10px;
+}
+
+a{
+  background-color: #d14635;
+}
+
+.image {
+  background: #999999 url("https://cdn.rios.hu/design/ha/logo.png") 0 0 no-repeat;
+  float: left;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+
+}
+
