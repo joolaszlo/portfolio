@@ -4,6 +4,15 @@
 <head>
   <title>JL Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/training.css">
+  <style>
+    #dynamicWidth {
+      height: 100px;
+      background-color: lightblue;
+      margin-top: 20px;
+      width: 100px;
+      transform: translateY(0px);
+    }
+  </style>
 </head>
 <body>
 
@@ -17,6 +26,56 @@
   <div class="image"></div>
   <p>elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi <em>Kalácsos fénk</em> elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi elemenopi </p>
 </div>
+
+
+<div class="rejtveny">
+
+  <h1>Input Mező Tartalmának Megjelenítése</h1>
+  <div class="display" id="display"></div><div class="display" id="display2"></div>
+
+  <input type="text" id="inputField" placeholder="Írj be valamit...">
+  <input type="text" id="inputField2" placeholder="Írj be valamit...">
+
+
+  <script>
+    document.getElementById('inputField').addEventListener('input', function() {
+      var inputText = this.value;
+      document.getElementById('display').textContent = inputText;
+    });
+  </script>
+  <script>
+    function updateWidth() {
+    document.getElementById('inputField2').addEventListener('input', function() {
+      var inputText = this.value;
+      document.getElementById('dynamicWidth').style.transform = 'translateY(' + inputText + 'px)';
+    })
+    }
+
+    window.addEventListener('resize', updateWidth);
+    // Inicializáljuk a width értéket az oldal betöltésekor
+    updateWidth();
+  </script>
+
+</div>
+
+<h1>Dinamikus Width Beállítás</h1>
+<div id="dynamicWidth">Dinamikus szélességű div</div>
+
+<script>
+  function updateWidth() {
+    // Lekérjük az ablak aktuális szélességét
+    var windowWidth = window.innerWidth;
+    // Meghatározzuk a dinamikus width értéket (pl. hozzáadunk 100 pixelt az ablak szélességéhez)
+    var dynamicWidth = 800 - windowWidth;
+    // Beállítjuk az új width értéket a div elemre
+    document.getElementById('dynamicWidth').style.transform = 'translateY(' + dynamicWidth + 'px)';
+  }
+
+  // Figyeljük az ablak méretének változását
+  window.addEventListener('resize', updateWidth);
+  // Inicializáljuk a width értéket az oldal betöltésekor
+  updateWidth();
+</script>
 
 
 </body>

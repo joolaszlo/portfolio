@@ -65,4 +65,20 @@ a {
 
 .col:first-child {
   margin-left: 100px;
+  transform: translate3d(50px, 20px, 10px);
 }
+
+.rejtveny{
+  background-color: #35c4d1;
+  border: #d14635 1px solid;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.display{
+float: left;
+  box-sizing: content-box;
+}
+
