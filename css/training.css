@@ -82,3 +82,43 @@ float: left;
   box-sizing: content-box;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.popup .blanket {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup .content {
+  box-sizing: border-box;
+  position: absolute;
+background-color: white;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -200px;
+  padding: 20px;
+  text-align: center;
+}
+.popup .close{
+  border: none;
+  background-color: #ff3300;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  cursor: pointer;
+}
