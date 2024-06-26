@@ -88,6 +88,7 @@ float: left;
   bottom: 0;
   left: 0;
   right: 0;
+  display: none;
 }
 .popup .blanket {
   position: absolute;
@@ -120,4 +121,35 @@ background-color: white;
   top: -20px;
   right: -30px;
   cursor: pointer;
+}
+.box {
+  background-color: #35c4d1;
+  border: #d14635 1px solid;
+  padding: 100px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.boxs {
+  background-color: #35c4d1;
+  border: #d14635 1px solid;
+  padding: 100px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+}
+
+.box2 {
+  background-color: #d14635;
+  border: #d14635 1px solid;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+ /* z-index: 1;*/
 }
