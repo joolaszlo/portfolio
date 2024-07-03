@@ -156,3 +156,45 @@ nav ul li a{
   display: inline;
 }
 
+.sep{
+
+}
+
+.nb-list{
+  width: 470px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  background-color: rgba(160, 150, 76, 0.88);
+}
+
+.nb-list li{
+  height: 70px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: #f9f9f9;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+  padding: 6px 20px;
+  box-sizing: border-box;
+}
+
+.nb-list li.blue{
+  background-color: #3d6290;
+}
+.nb-list li.grey{
+  background-color: #7f7f7f;
+}
+.nb-list li.pink{
+  background-color: #a75275;
+}
+.nb-list li.red{
+  background-color: #942525;
+}
+.nb-list li.green{
+  background-color: #2b442b;
+}
+.nb-list li.yellow{
+  background-color: #767629;
+}
+
