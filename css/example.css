@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-body, html{
+body, html {
   font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0 auto;
   width: 1200px;
+  background-color: rgba(123, 113, 95, 0.55);
 }
 
-h1{
+h1 {
   font-weight: 800;
   font-size: 50px;
 }
 
-h3{
+h3 {
   font-weight: bold;
   font-size: 30px;
 }
 
-h4{
+h4 {
   font-weight: bold;
   font-size: 20px;
 }
@@ -26,50 +27,58 @@ h4{
   width: 960px;
   margin: 0 auto;
 }
+
 .hero-banner {
-background-color: #574647;
+  background-color: #574647;
   height: 600px;
   padding: 50px 20px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
- /* box-shadow: #242424 0px 8px 20px;*/
+  /* box-shadow: #242424 0px 8px 20px;*/
   border-bottom: 1px solid #ff0000;
 }
 
-.hero-banner h1{
+.hero-banner h1 {
   color: white;
   margin: 14px 0px 20px;
 }
 
-.hero-banner h3{
+.hero-banner h3 {
   color: white;
   margin: 0 0 35px;
 
 }
 
 .hero-banner h4,
-.hero-banner h4 a{
+.hero-banner h4 a {
   color: white;
 }
 
-.character1{
-  position: absolute; top: 180px; right: 130px;
+.character1 {
+  position: absolute;
+  top: 180px;
+  right: 130px;
   background: url(/img/mod1.png) no-repeat 0 0;
   width: 181px;
   height: 148px;
 }
 
-.character2{
-  position: absolute; top: 250px; right: 10px;
+.character2 {
+  position: absolute;
+  top: 250px;
+  right: 10px;
   background: url(/img/mod2.png) no-repeat 0 0;
   background-size: 100%;
   width: 181px;
   height: 148px;
   transform: rotate(3deg);
 }
-.character3{
-  position: absolute; bottom: 90px; right: 160px;
+
+.character3 {
+  position: absolute;
+  bottom: 90px;
+  right: 160px;
   background: url(/img/mod3.png) no-repeat 0 0;
   background-size: 100%;
   width: 340px;
@@ -77,36 +86,44 @@ background-color: #574647;
 }
 
 a.cta,
-button.cta{
+button.cta {
   font-size: 30px;
   font-weight: bold;
   color: white;
-  background: #007FFF;
+  background: #fe0000;
   display: inline-block;
   /*outline: 10px solid rgba(0,127,255,.15);*/
-  box-shadow: 0 0 0 10px rgba(0,127,255,.15);
+  box-shadow: 0 0 0 10px rgba(67, 52, 52, 0.15);
   padding: 20px 30px;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
+}
+a.cta:active,
+button.cta:active {
+  opacity: 0.7;
 }
 
 a.cta.alt,
-button.cta.alt{
+button.cta.alt {
   background-color: #652424;
   color: black;
 }
 
-nav{
+nav {
   height: 100px;
-  background-color: #ffffff;
+  background-color: #bcabab;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-position: sticky;
+  position: sticky;
   top: 0;
+  z-index: 999;
 }
 
-nav .logo{
+nav .logo {
   display: block;
-  position: absolute; top: 20%; left: -40px;
+  position: absolute;
+  top: 20%;
+  left: -40px;
   background: url("/img/doom-nightmare-the-gang.png") no-repeat 0 0;
   transform: scale(70%);
   width: 400px;
@@ -114,19 +131,19 @@ nav .logo{
 
 }
 
-nav ul{
+nav ul {
   padding: 0;
   margin: 0 20px 0 0;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
   padding: 0 10px;
   line-height: 100px;
   float: right;
 }
 
-nav ul li a{
+nav ul li a {
   display: block;
   font-size: 30px;
   font-weight: bold;
@@ -135,7 +152,7 @@ nav ul li a{
   text-transform: uppercase;
 }
 
-.more-info{
+.more-info {
   padding: 5px 0;
   text-align: center;
   font-size: 20px;
@@ -145,10 +162,12 @@ nav ul li a{
   margin: 18px 0 35px;
 
 }
-.more-info h2{
+
+.more-info h2 {
   margin: 30px 0 0 0;
 }
-.highlight{
+
+.highlight {
   color: #ffc400;
   background-color: black;
   font-weight: 800;
@@ -156,18 +175,34 @@ nav ul li a{
   display: inline;
 }
 
-.sep{
-
+.sep {
+  width: 470px;
+  height: 5px;
+  background-color: #877575;
+  margin: 70px auto;
 }
 
-.nb-list{
+.story h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.story p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nb-list {
   width: 470px;
   padding: 20px 20px 0 20px;
   box-sizing: border-box;
-  background-color: rgba(160, 150, 76, 0.88);
+  background-color: rgba(125, 106, 106, 0.88);
+  border: #685656 solid 2px;
+  float: left;
+  margin: 0 20px 20px 0;
 }
 
-.nb-list li{
+.nb-list li {
   height: 70px;
   border-radius: 10px;
   font-size: 40px;
@@ -179,22 +214,74 @@ nav ul li a{
   box-sizing: border-box;
 }
 
-.nb-list li.blue{
-  background-color: #3d6290;
+
+.nb-list li.blue {
+  background-color: #903d3d;
 }
-.nb-list li.grey{
+
+.nb-list li.grey {
   background-color: #7f7f7f;
 }
-.nb-list li.pink{
-  background-color: #a75275;
+
+.nb-list li.pink {
+  background-color: #3c222d;
+  position: absolute;
+  top: 1222px;
+  width: 430px;
+  rotate: 6deg;
+  transform-origin: 120% 500%;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.64);
 }
-.nb-list li.red{
+
+.nb-list li.purple {
+  content: '';
+  position: absolute;
+width:50px;
+  height: 55px;
+  background: url("/img/ix.png") no-repeat 0 0;
+  top: 1200px;
+  rotate: 6deg;
+  transform-origin: -390% 3500px;
+
+}
+
+
+
+.nb-list li.red {
   background-color: #942525;
 }
-.nb-list li.green{
-  background-color: #2b442b;
+
+.nb-list li.green {
+  background-color: #a75275;
 }
-.nb-list li.yellow{
-  background-color: #767629;
+
+.nb-list li.black {
+  background-color: #1e1b1d;
+}
+
+.nb-list li.yellow {
+  background-color: #393923;
+}
+
+.gang-img {
+  display: block;
+  margin: 0 auto;
+  background: url("/img/the gang.png") no-repeat 0 0;
+  background-size: 100%;
+  width: 687px;
+  height: 564px;
+}
+
+footer {
+  background-color: #141111;
+  margin: 40px 0;
+  padding: 1px 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.popup{
+  display: none;
 }
 
