@@ -25,7 +25,7 @@
 <nav>
   <a href="#" class="logo"></a>
   <ul>
-    <li><a href="#">Sigh Up</a></li>
+    <li><a href="#" onclick="showPopup();">Sigh Up</a></li>
     <li><a href="#story">The Story</a></li>
     <li><a href="#more-info">Moar Info</a></li>
   </ul>
@@ -36,7 +36,7 @@
     <p>Every week we have <span class="highlight">a party.</span> If you want to join us then join our fan club.
       Members will also receive pictures of us in all kinds of shapes and sizes.
       Cool huh?</p>
-    <button class="cta">Sign Me Up!</button>
+    <button class="cta" onclick="showPopup();">Sign Me Up!</button>
   </div>
 </div>
 
@@ -72,19 +72,22 @@
 <footer>
   <p>Made by Me &copy; 2024</p>
 </footer>
-<div class="popup">
+<div class="popup" id="popup">
   <div class="blanket"></div>
   <div class="content">
     <h2>Fill In Your Details</h2>
     <form action="">
-      <div class="item">
-        <label>Your Name</label>
-        <input type="text" value="NAME HERE">
+      <div class="row">
+        <div class="item">
+          <label>Your Name</label>
+          <input type="text" value="NAME HERE">
+        </div>
+        <div class="item">
+          <label>Your Favorite Color</label>
+          <input type="text" value="COLOR HERE">
+        </div>
       </div>
-      <div class="item">
-        <label>Your Favorite Color</label>
-        <input type="text" value="COLOR HERE">
-      </div>
+      <div class="row">
       <div class="item">
         <label>Your Favorite Number</label>
         <input type="text" value="NUMBER HERE">
@@ -93,10 +96,14 @@
         <label>Your IQ</label>
         <input type="text" value="IQ HERE">
       </div>
+      </div>
       <button class="cta">Commit & Push!</button>
     </form>
-    <button class="close">Close</button>
+    <button class="close"  onclick="hidePopup();">Close</button>
   </div>
 </div>
+
+
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
