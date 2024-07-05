@@ -1,0 +1,15 @@
+p {
+  font-size: 30px;
+  color: pink;
+  margin-top: 30px;
+  display: inline;
+}
+
+.highlighted {
+  background: #3d6290;
+  display: inline;
+}
+
+#intro{
+ font-size: 38px;
+}
