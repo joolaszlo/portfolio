@@ -1,15 +1,66 @@
-p {
-  font-size: 30px;
-  color: pink;
-  margin-top: 30px;
-  display: inline;
+body {
+  background-color: #ff4507;
+  width: 1000px;
+  margin: 200px auto;
+
+}
+  .hface{
+    height: 120px;
 }
 
-.highlighted {
-  background: #3d6290;
-  display: inline;
-}
+  .eye-center{
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
 
-#intro{
- font-size: 38px;
+  .wew{
+    animation-name: colorchange;
+    animation-duration: 99s;
+    animation-iteration-count: infinite;
+  }
+.feher{
+  animation-name: colorchange;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
+  @keyframes bounce {
+
+    0%{
+      transform: translateY(10px);
+    }
+
+    20%{
+      transform: translateX(-30px);
+    }
+    60%{
+     transform: translateY(-10px);
+    }
+    80%{
+      transform: translateX(20px);
+    }
+    100%{
+      transform: translateY(10px);
+    }
+  }
+
+  @keyframes colorchange {
+    0%{
+      fill: #f8e5e5;
+    }
+    20%{
+      fill: #e5c1c1;
+    }
+    60%{
+      fill: #eb7979;
+    }
+    80%{
+      fill: #ecadad;
+    }
+    100%{
+      fill: #f2d9d9;
+    }
+  }
+
+
+
