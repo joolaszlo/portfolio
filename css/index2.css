@@ -1,0 +1,70 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.welcome {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  background: #252a32;
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+  color: #dfd78c;
+  font-size: 30px;
+
+
+}
+
+.right {
+  background: #e84c2d;
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+  color: #dfd78c;
+  font-size: 30px;
+}
+
+#welcome .left {
+  height: 100vh;
+
+}
+
+#welcome .right {
+  height: 100vh;
+}
+.page{
+  display: flex;
+}
+.page.boxy {
+  width: 50%;
+  height: 400px;
+  background: #aeaeae;
+  border: #483a94 1px solid;
+}
+.page.boxy.hide{
+  display: none;
+}
+
+.page.boxy.pic1{
+  background: rgba(0, 0, 0, 0);
+  background-image: url("/img/ralph_big.jpg");
+  background-size: 200%;
+  background-repeat: repeat-y;
+  background-position: right;
+  background-attachment: fixed;
+}
