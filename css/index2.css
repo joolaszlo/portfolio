@@ -59,19 +59,61 @@ body {
 }
 .page.boxy {
   width: 50%;
-  height: 400px;
-  background: #aeaeae;
-  border: #483a94 1px solid;
+  height: 300px;
+  background: #252a32;
+  padding: 20px;
+  text-align: left ;
 }
-.page.boxy.hide{
-  display: none;
+
+.page.boxy.github{
+  height: 400px;
+  background-color: #5bb953;
+
+}
+.page.boxy.github2{
+  height: 400px;
+  background-color: #252a32;
+}
+
+.page.boxy.projects{
+  height: 400px;
+  background-color: #5bb953;
+
+}
+.page.boxy.projects2{
+  height: 400px;
+  background-color: #b95353;
+}
+
+.page.boxy.profiles{
+  height: 400px;
+}
+.page.boxy.profiles2{
+  height: 400px;
+  background-color: #b95353;
+
 }
 
 .page.boxy.pic1{
   background: rgba(0, 0, 0, 0);
-  background-image: url("/img/ralph_big.jpg");
+  background-image: url("/portfolio/img/ralph_big.jpg");
   background-size: 200%;
   background-repeat: repeat-y;
   background-position: right;
   background-attachment: fixed;
+}
+
+.page.boxy h1{
+  color: #483a94;
+  font-size: 30px;
+  text-align: left;
+  display: block;
+}
+
+.page.boxy a{
+  display: grid;
+  box-sizing: content-box;
+  color: #483a94;
+  text-decoration: none;
+  font-size: 20px;
 }
