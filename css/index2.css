@@ -40,7 +40,7 @@ body {
 }
 
 .right {
-  background: #538bb9;
+  background: #16161b; /*#538bb9;*/
   width: 50%;
   display: inline-block;
   text-align: left;
@@ -66,42 +66,55 @@ body {
 }
 
 .page.boxy.github{
-  height: 400px;
-  background-color: #538bb9;
+  height: 300px;
+  background-color: #252a32;/*#538bb9;*/
   transition: background-color 0.3s;
 
 }
 .page.boxy.github:hover{
-  background-color: #4778a0;
+  background-color: #538bb9;
 
 }
+
+.page.boxy.github a:hover{
+  color: #000000;
+
+}
+
 .page.boxy.github2{
-  height: 400px;
+  height: 300px;
   background-image: url("/portfolio/img/github_bg.png");
   background-size: 50%;
-  /*background-repeat: repeat-y;*/
-  background-position: right;
+  background-repeat: no-repeat; /*repeat-y;*/
+  background-position: top right;
   background-attachment: fixed;
-}
 
-.page.boxy.projects{
-  height: 400px;
-  background-color: #5bb953;
-
-}
-.page.boxy.projects2{
-  height: 400px;
-  background-color: #b95353;
 }
 
 .page.boxy.profiles{
-  height: 400px;
-}
-.page.boxy.profiles2{
-  height: 400px;
-  background-color: #b95353;
+  height: 300px;
+  background-color: #252a32;/*#b95353;*/
 
 }
+.page.boxy.profiles2{
+  height: 300px;
+  background-image: url("/portfolio/img/github_bg.png");
+  background-size: 50%;
+  background-repeat: no-repeat; /*repeat-y;*/
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+.page.boxy.profiles:hover{
+  background-color: #53b98f;
+
+}
+
+.page.boxy.profiles a:hover{
+  color: #000000;
+
+}
+
 
 .page.boxy.pic1{
   background: rgba(0, 0, 0, 0);
