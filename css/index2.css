@@ -6,13 +6,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.navbar{
+  height: 20px;
+  background-color: #16161b;
+  color: #252a32;
+  font-size: 20px;
+  text-align: left;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 10px;
+}
+
+.navbar a{
+  color: #dfd78c;
+  text-decoration: none;
+}
+
 .welcome {
   height: 100vh;
   width: 100%;
   display: flex;
 }
-
-
 
 .text{
   position: absolute;
@@ -91,6 +107,24 @@ body {
 
 }
 
+.page.boxy.projects{
+  height: 300px;
+  background-color: #ffffff;/*#538bb9;*/
+margin: 0 auto;
+
+}
+
+.page.boxy.projects2{
+  height: 300px;
+  background-color: #252A32FF;/*#538bb9;*/
+  transition: background-color 0.3s;
+}
+
+.page.boxy.projects2:hover{
+  background-color: #53b98f;
+}
+
+
 .page.boxy.profiles{
   height: 300px;
   background-color: #252a32;/*#b95353;*/
@@ -101,18 +135,16 @@ body {
   background-image: url("/portfolio/img/github_bg.png");
   background-size: 50%;
   background-repeat: no-repeat; /*repeat-y;*/
-  background-position: top left;
+  background-position: top right;
   background-attachment: fixed;
 }
 
 .page.boxy.profiles:hover{
-  background-color: #53b98f;
-
+  background-color: #6e53b9;
 }
 
 .page.boxy.profiles a:hover{
   color: #000000;
-
 }
 
 
