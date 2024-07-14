@@ -6,21 +6,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.navbar{
+.navbar {
   height: 20px;
-  background-color: #16161b;
-  color: #252a32;
+  background-color: transparent;
+  color: #cedfe9;
   font-size: 20px;
   text-align: left;
-  display: block;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   padding: 10px;
 }
 
-.navbar a{
-  color: #dfd78c;
+.navbar a {
+  color: #190e0c;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #cedfe9;
   text-decoration: none;
 }
 
@@ -30,24 +34,24 @@ body {
   display: flex;
 }
 
-.text{
+.text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #dfd78c;
+  color: #190e0c;
   font-size: 30px;
   text-align: center;
 }
 
-.text p{
-  color: #dfd78c;
+.text p {
+  color: #190e0c;
   font-size: 15px;
   text-align: center;
 }
 
 .left {
-  background: #252a32;
+  background: #00696f;
   width: 50%;
   display: inline-block;
   text-align: right;
@@ -56,7 +60,7 @@ body {
 }
 
 .right {
-  background: #16161b; /*#538bb9;*/
+  background: #cedfe9; /*#538bb9;*/
   width: 50%;
   display: inline-block;
   text-align: left;
@@ -70,34 +74,36 @@ body {
 #welcome .right {
   height: 100vh;
 }
-.page{
+
+.page {
   display: flex;
 }
+
 .page.boxy {
   width: 50%;
   height: 300px;
-  background: #252a32;
+  background: #cedfe9;
   padding: 20px;
-  text-align: left ;
+  text-align: left;
 }
 
-.page.boxy.github{
+.page.boxy.github {
   height: 300px;
-  background-color: #252a32;/*#538bb9;*/
+  background-color: #cedfe9; /*#538bb9;*/
   transition: background-color 0.3s;
-
-}
-.page.boxy.github:hover{
-  background-color: #538bb9;
-
 }
 
-.page.boxy.github a:hover{
+.page.boxy.github:hover {
+  background-color: #64e7eb;
+
+}
+
+.page.boxy.github a:hover {
   color: #000000;
 
 }
 
-.page.boxy.github2{
+.page.boxy.github2 {
   height: 300px;
   background-image: url("/portfolio/img/github_bg.png");
   background-size: 50%;
@@ -107,48 +113,47 @@ body {
 
 }
 
-.page.boxy.projects{
+.page.boxy.projects {
   height: 300px;
-  background-color: #ffffff;/*#538bb9;*/
-margin: 0 auto;
+  background-image: url("/portfolio/img/projects.png");
+  background-size: 50%;
+  background-repeat: no-repeat; /*repeat-y;*/
+  background-position: top left;
+  background-attachment: fixed;
 
 }
 
-.page.boxy.projects2{
+.page.boxy.projects2 {
   height: 300px;
-  background-color: #252A32FF;/*#538bb9;*/
+  background-color: #cedfe9; /*#538bb9;*/
   transition: background-color 0.3s;
 }
 
-.page.boxy.projects2:hover{
-  background-color: #53b98f;
+.page.boxy.projects2:hover {
+  background-color: #a67bf8;
 }
 
 
-.page.boxy.profiles{
+.page.boxy.profiles {
   height: 300px;
-  background-color: #252a32;/*#b95353;*/
+  background-color: #cedfe9; /*#b95353;*/
 
 }
-.page.boxy.profiles2{
-  height: 300px;
-  background-image: url("/portfolio/img/github_bg.png");
-  background-size: 50%;
-  background-repeat: no-repeat; /*repeat-y;*/
-  background-position: top right;
-  background-attachment: fixed;
+
+.page.boxy.profiles2 {
+  background-color: #00696f;
 }
 
-.page.boxy.profiles:hover{
-  background-color: #6e53b9;
+.page.boxy.profiles:hover {
+  background-color: #ff84aa;
 }
 
-.page.boxy.profiles a:hover{
+.page.boxy.profiles a:hover {
   color: #000000;
 }
 
 
-.page.boxy.pic1{
+.page.boxy.pic1 {
   background: rgba(0, 0, 0, 0);
   background-image: url("/portfolio/img/ralph_big.jpg");
   background-size: 200%;
@@ -157,15 +162,15 @@ margin: 0 auto;
   background-attachment: fixed;
 }
 
-.page.boxy h1{
-  color: #dfd78c;
+.page.boxy h1 {
+  color: #190e0c;
   font-size: 30px;
   text-align: left;
   display: block;
 }
 
-.page.boxy a{
-  color: #dfd78c;
+.page.boxy a {
+  color: #190e0c;
   display: grid;
   box-sizing: content-box;
   text-decoration: none;
