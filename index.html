@@ -1,48 +1,128 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<html xml:lang="en" lang="en">
+<html lang="hu">
 <head>
-  <title>JL Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <meta charset="UTF-8" />
+  <title>Gebana Lovely – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <h1>PORTFOLIO</h1>
-</header>
-<main>
-  <div class="box"><h2>ME</h2>
-    <p>👋 Hello there!
-      <br><br>
-      I'm a fresh-out-of-the-oven junior Java backend developer, eager to dive into the world of code and coffee. With a
-      passion for all things IT, I love exploring different facets of the tech universe.
-      <br><br>
-      Welcome to my portfolio site! Here, you'll find a collection of my projects, showcasing my journey and
-      growth as a developer. Whether it's crafting clean code or tackling complex backend challenges, I'm all in.
-      <br><br>
-      Feel free to browse around and get in touch if you'd like to collaborate or just chat about java, tech ...tanks,
-      cats!</p></div>
-  <div class="box box2"><h2>THINGS I MADE</h2>
-    <div class="projectbox">
-      <div class="content"><h1>Project 1</h1>
-      <p>The column-width CSS property sets the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the column-width value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.</p>
-      </div><div class="content">
-      <img width="400px" src="https://i.ibb.co/4mxDdXg/Irq-OCQFbxc.png"/></div>
+<div class="page">
+  <header class="site-header">
+    <div class="logo-mark">{GL}</div>
+    <div class="site-header-text">
+      <h1 class="site-title">Joó László</h1>
+      <p class="site-tagline">developer</p>
     </div>
+  </header>
 
-    <div class="projectbox">
-      <h3>Project 2</h3>
-      <p>Project 2 description</p>
-    </div>
-    <div class="projectbox">
-      <h3>Project 3</h3>
-      <p>Project 3 description</p>
-    </div>
-  </div>
-  <div class="box box3"><h2>THINGS I LIKE</h2></div>
-  <div class="box box4"><h2>SOCIAL AND OTHER THINGS</h2></div>
-</main>
-<footer>
-  <p>&copy; 2024- JL</p>
-</footer>
+  <main>
+    <!-- RÖVID BEMUTATKOZÁS -->
+    <section id="about" class="card">
+      <h2 class="section-title">&lt;about /&gt;</h2>
+      <p>
+        Rövid bemutatkozás helye. Ide írhatsz pár mondatot arról, mivel
+        foglalkozol, milyen technológiákat szeretsz, vagy min dolgozol éppen.
+      </p>
+    </section>
+
+    <!-- TÖBBSZÖR HASZNÁLHATÓ LINK-BOXOK -->
+    <section id="links" class="card">
+      <h2 class="section-title">&lt;links /&gt;</h2>
+
+      <div class="link-box-grid">
+        <!-- Link box #1 – saját oldalak -->
+        <article class="link-box" style="--box-accent: #3b82f6;">
+          <header class="link-box-header">
+            <h3 class="link-box-title">My sites</h3>
+            <span class="link-box-tag">web</span>
+          </header>
+          <ul class="link-list">
+            <li><a href="#" target="_blank">Fő oldal</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
+            <li><a href="#" target="_blank">Demo / sandbox</a></li>
+          </ul>
+        </article>
+
+        <!-- Link box #2 – profilok -->
+        <article class="link-box" style="--box-accent: #22c55e;">
+          <header class="link-box-header">
+            <h3 class="link-box-title">Profiles</h3>
+            <span class="link-box-tag">social</span>
+          </header>
+          <ul class="link-list">
+            <li><a href="#" target="_blank">GitHub</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">YouTube</a></li>
+          </ul>
+        </article>
+
+        <!-- Link box #3 – programok / projektek linkként -->
+        <article class="link-box" style="--box-accent: #eab308;">
+          <header class="link-box-header">
+            <h3 class="link-box-title">Tools & apps</h3>
+            <span class="link-box-tag">code</span>
+          </header>
+          <ul class="link-list">
+            <li><a href="#" target="_blank">NeoFocus – pomodoro app</a></li>
+            <li><a href="#" target="_blank">War Thunder utility</a></li>
+            <li><a href="#" target="_blank">Egyéb mini projektek</a></li>
+          </ul>
+        </article>
+      </div>
+      <!-- Új boxot létrehozni: másold valamelyik <article class="link-box"> blokkot -->
+    </section>
+
+    <!-- PROJEKTEK KÉP + LINK FORMÁBAN -->
+    <section id="projects" class="card">
+      <h2 class="section-title">&lt;projects /&gt;</h2>
+      <p class="section-intro">
+        Itt megjelenítheted a fontosabb programjaidat kép + név + link formában.
+        A képek most csak helykitöltők (CSS háttér), később lecserélheted őket
+        valódi screenshotokra.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-thumb project-thumb-1"></div>
+          <div class="project-body">
+            <h3 class="project-title">NeoFocus – Pomodoro timer</h3>
+            <p class="project-desc">
+              Minimalista fókuszidő-kezelő app testreszabható óradizájnokkal és
+              geek-barát UX-szel.
+            </p>
+            <a href="#" target="_blank" class="project-link">Megnyitás</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb project-thumb-2"></div>
+          <div class="project-body">
+            <h3 class="project-title">War Thunder Text Tool</h3>
+            <p class="project-desc">
+              Kis desktop eszköz War Thunder szövegek és configok szerkesztéséhez.
+            </p>
+            <a href="#" target="_blank" class="project-link">Megnyitás</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb project-thumb-3"></div>
+          <div class="project-body">
+            <h3 class="project-title">Random geek lab</h3>
+            <p class="project-desc">
+              Kísérleti Python/Flutter projektek, automatizmusok és egyéb játékszerek.
+            </p>
+            <a href="#" target="_blank" class="project-link">Megnyitás</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with plain HTML &amp; CSS · <span class="cursor">_</span></p>
+  </footer>
+</div>
 </body>
 </html>
