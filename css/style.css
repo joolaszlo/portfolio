@@ -1,16 +1,16 @@
-/* Alap színek + geek/terminal hangulat */
+/* Cassette futurism – világos, fehéres-szürkés verzió */
 :root {
-  --bg: #020617;
-  --bg-elevated: #020617;
-  --card-bg: #020817;
-  --card-border: #1f2937;
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.08);
+  --bg: #e8eaef;          /* világos, kicsit szürkés háttér */
+  --bg-elevated: #f3f4f8;
+  --card-bg: #f7f4ec;     /* kazettás, enyhén bézses "műanyag" panel */
+  --card-border: #c3beb0;
+  --text-main: #191f2a;   /* sötét, jól olvasható szöveg */
+  --text-muted: #6f706e;  /* enyhén barnás-szürkés */
+  --accent: #ff9b42;      /* narancsos LED / gombfény */
+  --accent-soft: rgba(255, 155, 66, 0.1);
   --radius-lg: 14px;
   --radius-md: 10px;
-  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.7);
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.22);
 }
 
 /* Reset jellegű alapok */
@@ -29,9 +29,16 @@ body {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 55%),
-    radial-gradient(circle at bottom, rgba(34, 197, 94, 0.1), transparent 60%),
-    var(--bg);
+    radial-gradient(circle at top left, rgba(0, 200, 170, 0.15), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255, 155, 66, 0.16), transparent 60%),
+      /* enyhe vízszintes "scanline" minta, de nagyon halvány */
+    repeating-linear-gradient(
+      to bottom,
+      #f5f6fb 0,
+      #f5f6fb 2px,
+      #eef0f6 2px,
+      #eef0f6 4px
+    );
   color: var(--text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
   sans-serif;
@@ -55,18 +62,21 @@ body {
 .logo-mark {
   width: 54px;
   height: 54px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  background: radial-gradient(circle at 30% 20%, #38bdf8, #0f172a);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 147, 135, 0.8);
+  background:
+    linear-gradient(135deg, #fdfcf7, #e7e1cf 45%, #c5c7d6 85%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
   Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  color: #e5e7eb;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+  letter-spacing: 0.08em;
+  color: #27262a;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 14px 26px rgba(0, 0, 0, 0.18);
 }
 
 .site-header-text {
@@ -85,25 +95,22 @@ body {
   margin: 0;
   font-size: 0.9rem;
   color: var(--text-muted);
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-  Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
-/* Kártya alap */
+/* Kártya alap – világos retro panel */
 .card {
-  background: linear-gradient(
-    135deg,
-    rgba(148, 163, 184, 0.22),
-    transparent 30%
-  ),
-  radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent),
-  var(--card-bg);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(245, 241, 231, 0.95)
+    );
   border-radius: var(--radius-lg);
   border: 1px solid var(--card-border);
   padding: 20px 20px 22px;
   margin-bottom: 20px;
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(18px);
 }
 
 /* Szekció cím */
@@ -112,7 +119,7 @@ body {
   font-size: 1.05rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #8a877a;
   font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
@@ -129,8 +136,8 @@ body {
   font-size: 0.98rem;
 }
 
-/* LINK BOXOK – REUSABLE ELEMEK
-   Háttérszín/akcentus állítása: style="--box-accent: #szín;" az <article> elemben
+/* LINK BOXOK – többször felhasználható, akcentussal
+   Háttér/akcentus: style="--box-accent: #szín;" az <article> elemben
 */
 .link-box-grid {
   display: grid;
@@ -141,9 +148,10 @@ body {
 
 .link-box {
   --box-accent: var(--accent);
-  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+  background:
+    linear-gradient(180deg, #f9f7f0, #f1eee5);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  border: 1px solid rgba(157, 150, 134, 0.9);
   padding: 12px 12px 10px;
   position: relative;
   overflow: hidden;
@@ -153,13 +161,14 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--box-accent) 25%, transparent),
-    transparent 40%,
-    color-mix(in srgb, var(--box-accent) 18%, transparent)
-  );
-  opacity: 0.18;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--box-accent) 22%, transparent),
+      transparent 40%,
+      color-mix(in srgb, #00c8aa 18%, transparent)
+    );
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -183,9 +192,9 @@ body {
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--box-accent) 75%, transparent);
-  background: color-mix(in srgb, var(--box-accent) 12%, transparent);
-  color: #e5e7eb;
+  border: 1px solid color-mix(in srgb, var(--box-accent) 70%, transparent);
+  background: color-mix(in srgb, var(--box-accent) 20%, #fdfaf4);
+  color: #222222;
   font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
@@ -217,7 +226,7 @@ body {
   content: ">";
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.8rem;
-  color: color-mix(in srgb, var(--box-accent) 65%, #6b7280);
+  color: color-mix(in srgb, var(--box-accent) 65%, #8b8470);
 }
 
 .link-list a:hover {
@@ -235,56 +244,63 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(148, 163, 184, 0.6);
+  border: 1px solid rgba(158, 152, 137, 0.9);
   overflow: hidden;
-  background: radial-gradient(circle at 10% 0%, #0b1120, #020617);
+  background: linear-gradient(135deg, #f7f4ec, #ebe6d6);
 }
 
-/* Placeholder „kép” – később cserélheted valódi img-re */
+/* Placeholder “kazettás / monitoros” képek – később cserélheted screenshotokra */
 .project-thumb {
   height: 140px;
   background-size: cover;
   background-position: center;
 }
 
-/* Három különböző geeky placeholder */
+/* Zöldes monitorcsík világos háttérrel */
 .project-thumb-1 {
-  background-image: linear-gradient(
-    135deg,
-    rgba(56, 189, 248, 0.45),
-    transparent
-  ),
-  linear-gradient(
-    -135deg,
-    rgba(94, 234, 212, 0.5),
-    rgba(15, 23, 42, 0.9)
-  );
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 200, 140, 0.55),
+      rgba(224, 243, 236, 1)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.06) 0,
+      rgba(0, 0, 0, 0.06) 2px,
+      rgba(0, 0, 0, 0.0) 2px,
+      rgba(0, 0, 0, 0.0) 4px
+    );
 }
 
+/* Barnás kazetta panel + narancs */
 .project-thumb-2 {
-  background-image: linear-gradient(
-    135deg,
-    rgba(251, 191, 36, 0.4),
-    transparent
-  ),
-  linear-gradient(
-    -135deg,
-    rgba(244, 63, 94, 0.4),
-    rgba(15, 23, 42, 0.9)
-  );
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 155, 66, 0.6),
+      rgba(191, 139, 85, 0.95)
+    ),
+    linear-gradient(
+      -135deg,
+      rgba(230, 196, 150, 0.8),
+      rgba(244, 233, 214, 1)
+    );
 }
 
+/* Lilás-szürke elektronika panel */
 .project-thumb-3 {
-  background-image: linear-gradient(
-    135deg,
-    rgba(129, 140, 248, 0.45),
-    transparent
-  ),
-  linear-gradient(
-    -135deg,
-    rgba(59, 130, 246, 0.5),
-    rgba(15, 23, 42, 0.9)
-  );
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(169, 168, 210, 0.7),
+      rgba(130, 133, 170, 0.95)
+    ),
+    linear-gradient(
+      -135deg,
+      rgba(233, 235, 245, 0.9),
+      rgba(218, 221, 238, 1)
+    );
 }
 
 .project-body {
